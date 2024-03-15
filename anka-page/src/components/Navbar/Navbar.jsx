@@ -3,11 +3,18 @@ import { useDisclosure } from '@mantine/hooks';
 import classes from './Navbar.module.css';
 import { useState } from 'react';
 import { IconChevronDown } from '@tabler/icons-react';
+import { useTranslation } from "react-i18next";
 
-const links = [
-    { link: '/about', label: 'About' },
-    { link: '/services', label: 'Services' },
-    { link: '/contact', label: 'Contact' },
+
+
+export const Navbar = () => {
+  const { t } = useTranslation('common');
+
+  const links = [
+    { link: '/home', label: (t("nav.home")) },
+    { link: '/about', label: (t("nav.about")) },
+    { link: '/services', label: (t("nav.services")) },
+    { link: '/contact', label: (t("nav.contact")) },
     {
         link: '#1',
         label: 'Language',
@@ -18,8 +25,6 @@ const links = [
         ],
       },
 ];
-
-export const Navbar = () => {
     const [burger, burgerAction] = useDisclosure(false);
     const [active, setActive] = useState(links[0].link);
 
