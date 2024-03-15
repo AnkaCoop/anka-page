@@ -12,11 +12,11 @@ import turkce from "./assets/translations/tr.json";
 
 
 i18next.init({
-  interpolation: { escapeValue: false },  // React already does escaping
-  lng: 'en',                              // language to use
+  interpolation: { escapeValue: false },  
+  lng: 'en',                              
   resources: {
       en: {
-          common: english               // 'common' is our custom namespace
+          common: english               
       },
       es: {
           common: espanol
