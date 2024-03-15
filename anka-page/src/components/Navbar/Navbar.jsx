@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 
 export const Navbar = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('translations');
 
   const links = [
     { link: '/home', label: (t("nav.home")) },
