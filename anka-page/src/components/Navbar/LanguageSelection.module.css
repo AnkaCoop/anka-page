@@ -1,0 +1,16 @@
+.control {
+    display: flex;
+    align-items: center;
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+    border: none
+
+  }
+  
+  .label {
+    text-decoration: none;
+    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+  }
+

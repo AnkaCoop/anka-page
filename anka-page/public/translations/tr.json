@@ -1,8 +1,7 @@
 {
     "nav": {
         "home": "Anasayfa",
-        "about": "Hakkımızda",
-        "skills": "Hizmetler",
+        "services": "Hizmetler",
         "contact": "İletişim"
     }
 }

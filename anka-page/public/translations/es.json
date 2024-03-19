@@ -1,8 +1,7 @@
 {
     "nav": {
         "home": "Inicio",
-        "about": "Nosotrxs",
-        "skills": "Servicios",
+        "services": "Servicios",
         "contact": "Contacto"
     }
 }
