@@ -20,6 +20,7 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
+    lng:"en",
     fallbackLng: 'en',
     debug: true,
     backend: {
@@ -28,7 +29,23 @@ i18n
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
-    }
+    },
+    detection: {
+      // Order and from where user language should be detected
+      order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
+
+      // Keys or params to lookup language from
+      lookupQuerystring: 'lng',
+      lookupCookie: 'i18next',
+      lookupLocalStorage: 'i18nextLng',
+      lookupFromPathIndex: 0,
+      lookupFromSubdomainIndex: 0,
+
+      // ...
+
+      // caches language in cookies, localStorage, and session
+      caches: ['cookie', 'localStorage', 'sessionStorage'],
+    },
   });
 
 
