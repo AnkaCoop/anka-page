@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { UnstyledButton, Menu, Group, Button } from "@mantine/core";
+import { Menu, Button } from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";
 import classes from "./LanguageSelection.module.css";
 import { useTranslation } from "react-i18next";
 
 export const LanguageSelection = () => {
   const { i18n } = useTranslation("translations");
-  const [opened, setOpened] = useState(false);
   const [selected, setSelected] = useState({ label: "", languageCode: "" });
 
   const data = [
@@ -35,13 +34,7 @@ export const LanguageSelection = () => {
           setSelected(item);
       }}
       key={item.label}
-      styles={{
-        item: {
-          fontSize: "18px",
-          fontWeight: 500,
-          color: "var(--mantine-color-gray-7)",
-        },
-      }}
+      className={classes.menuItem}
     >
       {item.label}
     </Menu.Item>
@@ -49,33 +42,16 @@ export const LanguageSelection = () => {
 
   return (
     <Menu
-      onOpen={() => setOpened(true)}
-      onClose={() => setOpened(false)}
       width="target"
       withinPortal
     >
       <Menu.Target>
-        {/* <UnstyledButton
-          className={classes.control}
-          data-expanded={opened || undefined}
-        >
-          <Group gap="xs">
-            <span className={classes.label}>{selected.label}</span>
-            <IconChevronDown size="1rem" />
-          </Group>
-        </UnstyledButton> */}
         <Button
-          rightSection={<IconChevronDown size="1rem" />}
+          rightSection={<IconChevronDown size="1rem" strokeWidth={3}/>}
           variant="outline"
           classNames={{
             root: classes.root,
-            // input: classes.input,
             label: classes.label,
-          }}
-          styles={{
-            root: {
-                
-            }
           }}
         >
           {selected.label}

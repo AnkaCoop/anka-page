@@ -1,28 +1,26 @@
-.control {
-    width: rem(100px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
-    border-radius: var(--mantine-radius-md);
-    border: rem(0px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
-    transition: background-color 150ms ease;
-    background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-6));
-  
-    &[data-expanded] {
-      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5));
-    }
-  
-    @mixin hover {
-      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5));
-    }
 
+  .root {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important; 
+    transition: none;
   }
-  .root{
-    border: none;
-    background-color:currentColor;
+  .root:hover {
+    background-color: transparent !important;
   }
-  
+  .root:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .root:active {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .menuItem {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0)) !important;
+  }
   .label {
     text-decoration: none;
     color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
