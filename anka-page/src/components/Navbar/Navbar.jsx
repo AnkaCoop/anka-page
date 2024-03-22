@@ -41,7 +41,16 @@ export const Navbar = () => {
   return (
     <header className={classes.header}>
       <div className={classes.inner}>
-        <Text className={classes.logo}>ANKA</Text>
+        <img
+          src="/logotype.svg"
+          style={{
+            height: "3rem",
+            marginRight: "10px",
+            padding: 4,
+            cursor: "pointer",
+          }}
+          alt="logo"
+        />{" "}
         <div className={classes.navItems}>
           <Group gap={30} visibleFrom="xs">
             {items}
