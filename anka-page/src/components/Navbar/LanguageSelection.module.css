@@ -1,0 +1,32 @@
+
+  .root {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important; 
+    transition: none;
+    /* padding-left: 12 !important; */
+  }
+  .root:hover {
+    background-color: transparent !important;
+  }
+  .root:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .root:active {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .menuItem {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0)) !important;
+  }
+  .label {
+    text-decoration: none;
+    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
