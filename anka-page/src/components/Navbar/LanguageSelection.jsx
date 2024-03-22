@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { UnstyledButton, Menu, Group } from "@mantine/core";
+import { UnstyledButton, Menu, Group, Button } from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";
 import classes from "./LanguageSelection.module.css";
 import { useTranslation } from "react-i18next";
@@ -29,15 +29,17 @@ export const LanguageSelection = () => {
   };
   const items = data.map((item) => (
     <Menu.Item
-      onClick={() => {
-        handleLanguageChange(item.languageCode), setSelected(item);
+      onClick={(event) => {
+        event.preventDefault,
+          handleLanguageChange(item.languageCode),
+          setSelected(item);
       }}
       key={item.label}
       styles={{
         item: {
           fontSize: "18px",
           fontWeight: 500,
-          color: "(var(--mantine-color-gray-7)",
+          color: "var(--mantine-color-gray-7)",
         },
       }}
     >
@@ -53,7 +55,7 @@ export const LanguageSelection = () => {
       withinPortal
     >
       <Menu.Target>
-        <UnstyledButton
+        {/* <UnstyledButton
           className={classes.control}
           data-expanded={opened || undefined}
         >
@@ -61,7 +63,23 @@ export const LanguageSelection = () => {
             <span className={classes.label}>{selected.label}</span>
             <IconChevronDown size="1rem" />
           </Group>
-        </UnstyledButton>
+        </UnstyledButton> */}
+        <Button
+          rightSection={<IconChevronDown size="1rem" />}
+          variant="outline"
+          classNames={{
+            root: classes.root,
+            // input: classes.input,
+            label: classes.label,
+          }}
+          styles={{
+            root: {
+                
+            }
+          }}
+        >
+          {selected.label}
+        </Button>
       </Menu.Target>
       <Menu.Dropdown>{items}</Menu.Dropdown>
     </Menu>
