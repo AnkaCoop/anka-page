@@ -55,6 +55,7 @@ export const Navbar = () => {
           />
           <Drawer opened={burger} onClose={handleBurgerClick}>
             {items}
+            <LanguageSelection />
           </Drawer>
         </div>
       </div>

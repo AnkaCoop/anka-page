@@ -53,6 +53,11 @@ export const LanguageSelection = () => {
             root: classes.root,
             label: classes.label,
           }}
+          styles={{
+            root: {
+              paddingLeft: 12, 
+            },
+          }}
         >
           {selected.label}
         </Button>

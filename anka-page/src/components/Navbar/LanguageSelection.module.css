@@ -4,6 +4,7 @@
     background-color: transparent !important;
     box-shadow: none !important; 
     transition: none;
+    /* padding-left: 12 !important; */
   }
   .root:hover {
     background-color: transparent !important;
