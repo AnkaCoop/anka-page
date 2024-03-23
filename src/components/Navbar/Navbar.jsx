@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   const links = [
     { link: "/home", label: t("nav.home") },
-    { link: "/services", label: t("nav.services") },
+    { link: "/technologies", label: t("nav.technologies") },
     { link: "/contact", label: t("nav.contact") },
   ];
   const [burger, burgerAction] = useDisclosure(false);
