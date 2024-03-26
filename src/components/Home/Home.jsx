@@ -15,7 +15,7 @@ import classes from "./Home.module.css";
 
 export const Home = () => {
   return (
-    <Container size="md">
+    <Container size="md" id="home">
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
@@ -28,7 +28,7 @@ export const Home = () => {
             illum quasi sunt earum repellendus nisi! Aspernatur quidem dolorem
             iusto sapiente magnam.
           </Text>
-</div>
+        </div>
         <Image src="../../../public/logo_color.svg" className={classes.image} />
       </div>
     </Container>

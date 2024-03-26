@@ -48,7 +48,7 @@ export const Technologies = () => {
   ));
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id='technologies'>
       <Grid gutter={80}>
         <Grid.Col span={{ base: 12, md: 5 }}>
           <Title className={classes.title} order={2}>

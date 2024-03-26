@@ -12,9 +12,9 @@ function App() {
         <Navbar />
       </AppShell.Header>
       <AppShell.Main>
-        <Home/>
-        <Technologies/>
-        <Contact/>
+        <Home id="home"/>
+        <Technologies id="technologies"/>
+        <Contact id="contact"/>
       </AppShell.Main>
 
     </AppShell>

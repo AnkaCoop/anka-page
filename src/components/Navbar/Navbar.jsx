@@ -9,16 +9,17 @@ export const Navbar = () => {
   const { t } = useTranslation("translations");
 
   const links = [
-    { link: "/home", label: t("nav.home") },
+    { link: "./", label: t("nav.home") },
     { link: "/technologies", label: t("nav.technologies") },
     { link: "/contact", label: t("nav.contact") },
   ];
-  const [burger, burgerAction] = useDisclosure(false);
+
   const [active, setActive] = useState(links[0].link);
 
+  const { burger, burgerAction } = useDisclosure(false);
+
   const handleBurgerClick = () => {
-    if (burger) burgerAction.close();
-    else burgerAction.open();
+    burger ? burgerAction.close() : burgerAction.open();
   };
 
   const items = links.map((link) => {
@@ -41,19 +42,41 @@ export const Navbar = () => {
   return (
     <header className={classes.header}>
       <div className={classes.inner}>
-        <img
-          src="/logotype.svg"
-          style={{
-            height: "3rem",
-            marginRight: "10px",
-            padding: 4,
-            cursor: "pointer",
-          }}
-          alt="logo"
-        />{" "}
+        <a href="#home">
+          <img
+            src="/logotype.svg"
+            style={{
+              height: "3rem",
+              marginRight: "10px",
+              padding: 4,
+              cursor: "pointer",
+            }}
+            alt="logo"
+          />
+        </a>
         <div className={classes.navItems}>
           <Group gap={30} visibleFrom="xs">
-            {items}
+            <a
+              href="#home"
+              className={classes.link}
+              onClick={handleBurgerClick}
+            >
+              Home
+            </a>
+            <a
+              href="#technologies"
+              className={classes.link}
+              onClick={handleBurgerClick}
+            >
+              Technologies
+            </a>
+            <a
+              href="#contact"
+              className={classes.link}
+              onClick={handleBurgerClick}
+            >
+              Contact
+            </a>
             <LanguageSelection />
           </Group>
           <Burger
@@ -63,7 +86,29 @@ export const Navbar = () => {
             size="sm"
           />
           <Drawer opened={burger} onClose={handleBurgerClick}>
-            {items}
+            <Group direction="column" gap={15}>
+              <a
+                href="#home"
+                className={classes.link}
+                onClick={handleBurgerClick}
+              >
+                Home
+              </a>
+              <a
+                href="#technologies"
+                className={classes.link}
+                onClick={handleBurgerClick}
+              >
+                Technologies
+              </a>
+              <a
+                href="#contact"
+                className={classes.link}
+                onClick={handleBurgerClick}
+              >
+                Contact
+              </a>
+            </Group>
             <LanguageSelection />
           </Drawer>
         </div>
