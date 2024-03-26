@@ -7,14 +7,14 @@ import { Contact } from "./components/Contact/Contact";
 function App() {
   return (
 
-    <AppShell header={{ height: 60 }}>
+    <AppShell >
       <AppShell.Header>
         <Navbar />
       </AppShell.Header>
       <AppShell.Main>
-        <Home id="home"/>
-        <Technologies id="technologies"/>
-        <Contact id="contact"/>
+        <Home />
+        <Technologies />
+        <Contact />
       </AppShell.Main>
 
     </AppShell>
