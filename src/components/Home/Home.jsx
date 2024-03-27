@@ -18,15 +18,13 @@ export const Home = () => {
     <Container size="md" id="home">
       <div className={classes.inner}>
         <div className={classes.content}>
-          <Title className={classes.title}>
-            We are a software cooperative We are collective construction,
-            culture and minds in constant motion.{" "}
+        <Title className={classes.title}>
+            At <span className={classes.highlight}>ANKA</span>, we believe in the power of collaboration to
+            create a better world. 
           </Title>
           <Text c="dimmed" mt="md">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
-            sequi vitae animi minima nisi? Numquam aspernatur, reprehenderit id
-            illum quasi sunt earum repellendus nisi! Aspernatur quidem dolorem
-            iusto sapiente magnam.
+            Our software cooperative is founded on the principles of openness,
+            inclusivity, and shared success.
           </Text>
         </div>
         <Image src="../../../public/logo_color.svg" className={classes.image} />
